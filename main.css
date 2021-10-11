@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+:root{
+  --lightColor: rgba(255,255,255,0.04);
+  --textColor:#f0f0f5;
+  --bgColor:#130f0d;
+  --primaryColor:#fd951f; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+body{
+  height: 100vh;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColor);
+  color: var(--textColor);
+}
+form{
+  background: rgba(255,255,255,0.03);
+  width: 100%;
+  max-width: 500px;
+  margin-right: 32px auto;
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+}
+form h2{
+  margin-bottom: 32px;
+}
+
+div.input{
+  margin-bottom: 24px;
+  position: relative;
+}
+input,button{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 16px 0;
+  border: none;
+  border-bottom: 1px solid var(--primaryColor);
+  background-color: transparent;
+  outline: none;
+}
+button{
+  margin-top: 16px;
+  background-color: var(--primaryColor);
+}
+input ~ label {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  color: rgba(248, 244, 244, 0.637);
+  transition: .3s;
+}
+input:focus ~ label, input:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.input span.error{
+  display: flex;
+  display: none;
+  padding: 0.4em;
+  background-color: rgba(204, 6, 6, 0.789);
+  border: 1px solid rgb(201, 43, 22);
+}
+input{
+  color: rgba(255, 255, 255, 0.658);
+  font-size: 14pt;
+}
